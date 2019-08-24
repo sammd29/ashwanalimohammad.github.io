@@ -1,6 +1,6 @@
 <?php session_start();
 if(isset($_POST['submit'])) {
-$youremail = 'yourname@domain.com';
+$youremail = 'ashwansameer@gmail.com';
 $fromsubject = 'Contact Form';
 $name = $_POST['name'];
 $mail = $_POST['email'];
