@@ -702,7 +702,7 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
                   </div>
 
                   <div>
-                     <button class="submit">Submit</button>
+                     <button class="submit" id="submitBtn">Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif">
                      </span>
@@ -803,6 +803,13 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+	      <script>
+$(document).ready(function(){
+    $("#submitBtn").click(function(){        
+        $("#contactForm").submit(); // Submit the form
+    });
+});
+</script>
 
    <script src="js/jquery.flexslider.js"></script>
    <script src="js/waypoints.js"></script>
