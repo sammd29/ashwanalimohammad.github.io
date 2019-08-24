@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700">
+<link rel="stylesheet"  href="css/form.css>
 
    <!-- Script
    ================================================== -->	<script src="js/modernizr.js"></script>
@@ -680,13 +680,26 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
 
                <!-- form -->
                    
-        <form class="contact-form" action="contactform.php" method="POST">
-			<input type="text" name="name" placeholder="Full name">
-			<input type="text" name="mail" placeholder="Your e-mail">
-			<input type="text" name="subject" placeholder="Subject">
-			<textarea name="message" placeholder="Message"></textarea>
-			<button type="submit" name="submit">SEND MAIL</button>
-		</form>	
+      <form id="contact" action="sendmemail.php" method="post">
+    <h3>Quick Contact</h3>
+    <h4>Contact us today, and get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Full Name" type="text" name="name" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Email Address" type="email" name="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Subject" type="text" name="subject" tabindex="3" required>
+    </fieldset>
+   
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form> 
 <!-- </div> <!-- Form End -->
 
                <!-- contact-warning -->
