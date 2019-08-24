@@ -21,7 +21,6 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet"  href="css/form.css>
 
    <!-- Script
    ================================================== -->	<script src="js/modernizr.js"></script>
@@ -653,7 +652,7 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
 
    <!-- Contact Section
    ================================================== -->
-   <section id="contact">
+    <section id="contact">
 
          <div class="row section-head">
 
@@ -678,29 +677,48 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
 
             <div class="eight columns">
 
-              
-                   
-      <form id="contact" action="sendmemail.php" method="post">
-    <h3>Quick Contact</h3>
-    <h4>Contact us today, and get reply with in 24 hours!</h4>
-    <fieldset>
-      <input placeholder="Full Name" type="text" name="name" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Email Address" type="email" name="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Subject" type="text" name="subject" tabindex="3" required>
-    </fieldset>
-   
-    <fieldset>
-      <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form> 
-  </div> 
+               <!-- form -->
+               <form action="sendmemail.php" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
 
 
             <aside class="four columns footer-widgets">
@@ -732,11 +750,11 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
                      </li>
                      <li>
                         <span>
-                        Sed ut perspiatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
                         eaque ipsa quae ab illo inventore veritatis et quasi
                         <a href="#">http://t.co/CGIrdxIlI3</a>
                         </span>
-//                        <b><a href="#">3 Days Ago</a></b>
+                        <b><a href="#">3 Days Ago</a></b>
                      </li>
                   </ul>
 
