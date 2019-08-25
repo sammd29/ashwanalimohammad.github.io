@@ -675,41 +675,32 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
             <div class="eight columns">
 
                <!-- form -->
-              <form class="contact__form" method="post" action="mail.php">
-                                
-                                <!-- form message -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                            Your message was sent successfully.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end message -->
+             <form action="mail.php" method="post" id="my_form" novalidate>
+        <label><span>Name <span class="required">*</span></span>
+            <input type="text" name="user_name" required class="input-field"/>
+        </label>
+        <label><span>Email <span class="required">*</span></span>
+            <input type="email" name="user_email" required class="input-field"/>
+        </label>
+        <label><span>Phone</span>
+            <input type="text" name="country_code" maxlength="4" placeholder="+91" required class="tel-number-field"/>—<input type="text" name="phone_number" maxlength="15" class="tel-number-field long" required/>
+        </label>
+            <label for="subject"><span>Regarding</span>
+            <select name="subject" class="select-field" required>
+            <option value="">---- Select ----</option>
+            <option value="General Question">General Question</option>
+            <option value="Advertise">Advertisement</option>
+            <option value="Partnership">Partnership Oppertunity</option>
+            </select>
+        </label>
+        <label for="field5"><span>Message <span class="required">*</span></span>
+            <textarea name="message" id="message" class="textarea-field" required></textarea>
+        </label>
+        <label>
+            <span> </span><input type="submit" id="submit_btn" value="Submit" />
+        </label>
+     </form>
 
-                                <!-- form element -->
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input name="name" type="text" class="form-control" placeholder="Name" required>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input name="email" type="email" class="form-control" placeholder="Email" required>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input name="phone" type="text" class="form-control" placeholder="Phone" required>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input name="subject" type="text" class="form-control" placeholder="Subject" required>
-                                    </div>
-                                    <div class="col-12 form-group">
-                                        <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <input name="submit" type="submit" class="btn btn-success" value="Send Message">
-                                    </div>
-                                </div>
-                                <!-- end form element -->
-                            </form>
   <!-- Form End -->
 
               </div>
