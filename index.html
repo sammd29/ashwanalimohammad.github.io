@@ -678,36 +678,42 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
             <div class="eight columns">
 
                <!-- form -->
-               <form action="https://formspree.io/ashwansameer@gmail.com" method="post" id="contactForm" name="contactForm">
-					<fieldset>
+              <form class="contact__form" method="post" action="mail.php">
+                                
+                                <!-- form message -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                            Your message was sent successfully.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end message -->
 
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">Submit</button>
-                     
-                  </div>
-
-					</fieldset>
-				   </form> <!-- Form End -->
+                                <!-- form element -->
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input name="name" type="text" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="email" type="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="phone" type="text" class="form-control" placeholder="Phone" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="subject" type="text" class="form-control" placeholder="Subject" required>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <input name="submit" type="submit" class="btn btn-success" value="Send Message">
+                                    </div>
+                                </div>
+                                <!-- end form element -->
+                            </form>
+  <!-- Form End -->
 
                <!-- contact-warning -->
                <div id="message-warning"> Error boy</div>
@@ -806,6 +812,8 @@ I'm a backend developer specialized in Java, Spring Boot, NodeJS, RabbitMQ, Ngin
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+<!-- 	      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="js/main.js"></script>
 
 </body>
 
