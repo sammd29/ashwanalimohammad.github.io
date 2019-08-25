@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 $("#my_form").submit(function(event){
 	event.preventDefault(); //prevent default action 
 	var proceed = true;
@@ -49,4 +49,3 @@ $("#my_form").submit(function(event){
 		});
 	}
 });
-</script>
